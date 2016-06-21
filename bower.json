@@ -1,0 +1,27 @@
+{
+  "name": "json-stable-stringify",
+  "version": "1.0.1",
+  "description": "Deterministic JSON.stringify() with custom sorting to get deterministic hashes from stringified results. Supports AMD, CommonJS, AngularJS, and global binding.",
+  "main": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/substack/json-stable-stringify.git"
+  },
+  "homepage": "https://github.com/substack/json-stable-stringify",
+  "keywords": [
+    "json",
+    "stringify",
+    "deterministic",
+    "hash",
+    "sort",
+    "stable"
+  ],
+  "author": {
+    "name": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net"
+  },
+  "license": "MIT"
+}

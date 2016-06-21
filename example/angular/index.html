@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+    <title>Angular Binding Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="../../index.js"></script>
+    <script>
+        angular.module('myApp', [
+            'jsonStableStringify'
+        ]);
+
+        angular
+            .module('myApp')
+            .controller('myController', ['$scope', 'jsonStableStringify', function($scope, jsonStableStringify) {
+                var user = {
+                    lastName: 'Gator',
+                    'firstName': "Ali"
+                };
+
+                $scope.userJson = jsonStableStringify(user);
+            }]);
+    </script>
+</head>
+<body>
+    <div ng-controller="myController">
+        {{::userJson}}
+    </div>
+</body>
+</html>

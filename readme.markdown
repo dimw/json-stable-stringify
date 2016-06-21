@@ -125,6 +125,41 @@ With [npm](https://npmjs.org) do:
 npm install json-stable-stringify
 ```
 
+With [bower](https://bower.io) do:
+
+```
+npm install bower json-stable-stringify
+```
+
+# Usage with AngularJS
+
+If run in the context of [AngularJS](https://angularjs.org), the module automatically recognizes the framework and 
+creates a ```jsonStableStringify``` factory. Add ```jsonStableStringify``` to you main module's list 
+dependencies to use it, e.g.: 
+
+```
+angular.module('myApp', [
+    'jsonStableStringify'
+]);
+```
+
+Then inject ```jsonStableStringify``` dependency:
+
+```
+angular
+  .module('myApp')
+  .controller('myController', ['$scope', 'jsonStableStringify', function($scope, jsonStableStringify) {
+    var user = {
+      lastName: 'Gator',
+      'firstName': "Ali"
+    };
+    
+    $scope.userJson = jsonStableStringify(user));   // {"firstName":"Ali","lastName":"Gator"}
+  });
+```
+
+See [example](example/angular/index.html).
+
 # license
 
 MIT

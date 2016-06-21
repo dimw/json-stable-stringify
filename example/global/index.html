@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+    <title>Global Binding Example</title>
+    <script src="../../index.js"></script>
+</head>
+<body>
+    <p>You should have seen an alert.</p>
+    <script>
+        var user = {
+            lastName: 'Gator',
+            'firstName': "Ali"
+        };
+
+        alert(jsonStableStringify(user));
+    </script>
+</body>
+</html>
